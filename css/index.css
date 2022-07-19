@@ -537,9 +537,47 @@ p {
   text-align: center;
 }
 
+@media screen and (min-width: 768px) {
+  .c-container {
+    width: 33.75rem;
+    padding: 4.75rem 0 0;
+  }
+
+  .c-header {
+    margin-bottom: 2.25rem;
+  }
+
+  .c-form {
+    margin-bottom: 1.25rem;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .c-list__item {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .c-menu {
+    row-gap: 1.25rem;
+    margin-bottom: 3.25rem;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, auto);
+    grid-template-areas: "number-task options btn-clear";
+  }
+  .c-menu__number-task {
+    grid-area: number-task;
+  }
+  .c-menu__btn-clear {
+    grid-area: btn-clear;
+  }
+  .c-menu__options {
+    grid-area: options;
+    border-radius: 0;
+  }
+}
 /* Generic */
 /* Elements */
 /* Components */
 /* Utilities */
+/* Responsive */
 
 /*# sourceMappingURL=index.css.map */

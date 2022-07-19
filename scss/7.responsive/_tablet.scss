@@ -1,0 +1,40 @@
+@use "../1.settings/variables";
+
+@media screen and (min-width: 768px) {
+  .c-container {
+    width: variables.$size-desktop;
+    padding: variables.$spacing-container-top-m 0 0;
+  }
+  .c-header {
+    margin-bottom: 2.25rem;
+  }
+  .c-form {
+    margin-bottom: 1.25rem;
+    padding: 1.25rem 1.5rem;
+  }
+  .c-list {
+    &__item {
+      padding: 1.25rem 1.5rem;
+    }
+  }
+  .c-menu {
+    & {
+      row-gap: 1.25rem;
+      margin-bottom: 3.25rem;
+      grid-template-rows: 1fr;
+      grid-template-columns: repeat(3,auto);
+      grid-template-areas: 
+        'number-task options btn-clear';
+    }
+    &__number-task {
+      grid-area: number-task;
+    }
+    &__btn-clear {
+      grid-area: btn-clear;
+    } 
+    &__options {
+      grid-area: options;
+      border-radius: 0;
+    }
+  }
+}
