@@ -447,7 +447,16 @@ p {
   margin: 0;
 }
 
+.c-container {
+  display: flex;
+  flex-direction: column;
+  width: 26.5rem;
+  padding: 2rem 1.5rem 0;
+  background-color: red;
+}
+
 /* Generic */
 /* Elements */
+/* Components */
 
 /*# sourceMappingURL=index.css.map */

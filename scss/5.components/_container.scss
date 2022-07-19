@@ -1,0 +1,10 @@
+@use '../1.settings/variables';
+
+.c-container {
+  display: flex;
+  flex-direction: column;
+  width: calc(variables.$size-movil + calc(variables.$spacing-container-sides * 2));
+  padding: variables.$spacing-container-top-s variables.$spacing-container-sides  0;
+  
+  background-color: red;
+}
