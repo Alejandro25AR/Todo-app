@@ -1,0 +1,14 @@
+.c-form {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem 1.25rem;
+    
+    background-color: #b6e6e6;
+    border-radius: .25rem;
+
+    &__input {
+        width: 100%;
+    }
+}

@@ -462,6 +462,19 @@ p {
   background-color: red;
 }
 
+.c-form {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem 1.25rem;
+  background-color: #b6e6e6;
+  border-radius: 0.25rem;
+}
+.c-form__input {
+  width: 100%;
+}
+
 /* Generic */
 /* Elements */
 /* Components */
