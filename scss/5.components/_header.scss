@@ -1,0 +1,9 @@
+.c-header {
+  & {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    
+    background-color: red;
+  }
+}
