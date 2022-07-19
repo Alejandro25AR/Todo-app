@@ -1,3 +1,11 @@
 /* Generic */
 @use '2.generic/normalize';
 @use '2.generic/box-sizing';
+
+/* Elements */
+@use '3.elements/body';
+@use '3.elements/buttons';
+@use '3.elements/headers';
+@use '3.elements/input';
+@use '3.elements/links';
+@use '3.elements/paragraphs';
