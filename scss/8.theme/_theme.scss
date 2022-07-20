@@ -1,0 +1,19 @@
+.theme {
+  & {
+    --backgroundColorBody: #fafafa;
+    --backgroundColorList: #d2d3db;
+    --backgroundColorItem: #ffffff;
+    --colorText: #9394a5;
+    --colorTextLight: #484b6a;
+    --colorTextLightHover: #484b6a;
+  }
+
+  &--dark {
+    --backgroundColorBody: #161722;
+    --backgroundColorList: #4d5066;
+    --backgroundColorItem: #25273c;
+    --colorText: #777a92;
+    --colorTextLight: #cacde8;
+    --colorTextLightHover: #e4e5f1;
+  }
+}
