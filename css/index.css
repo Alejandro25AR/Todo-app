@@ -415,9 +415,48 @@ template {
   box-sizing: border-box;
 }
 
+.theme {
+  --backgroundColorBody: #fafafa;
+  --backgroundColorList: #d2d3db;
+  --backgroundColorItem: #ffffff;
+  --colorText: #484b6a;
+  --colorTextLight: #97969B;
+  --colorTextLightHover: #484b6a;
+  --backgroundColorBodyTopOne: #BB5CF6;
+  --backgroundColorBodyTopTwo: #71A5FB;
+  --colorBoxShadow: #b6b6b6;
+  --colorTitle: #F8FCFD;
+  --svgTheme: url('data:image/svg+xml;charset=UTF-8, <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" ><path fill="rgb(255,255,255)" fill-rule="evenodd" d="M13 0c.81 0 1.603.074 2.373.216C10.593 1.199 7 5.43 7 10.5 7 16.299 11.701 21 17.5 21c2.996 0 5.7-1.255 7.613-3.268C23.22 22.572 18.51 26 13 26 5.82 26 0 20.18 0 13S5.82 0 13 0z"/></svg>');
+}
+.theme--dark {
+  --backgroundColorBody: #161722;
+  --backgroundColorList: #404259;
+  --backgroundColorItem: #25273c;
+  --colorText: #cacde8;
+  --colorTextLight: #777a92;
+  --colorTextLightHover: #e4e5f1;
+  --backgroundColorBodyTopOne: #2E1FAC;
+  --backgroundColorBodyTopTwo: #781C73;
+  --colorBoxShadow: none;
+  --colorTitle: #FDFDFF;
+  --svgTheme: url('data:image/svg+xml;charset=UTF-8, <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"><path fill="rgb(255,255,255)" fill-rule="evenodd" d="M13 21a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-5.657-2.343a1 1 0 010 1.414l-2.121 2.121a1 1 0 01-1.414-1.414l2.12-2.121a1 1 0 011.415 0zm12.728 0l2.121 2.121a1 1 0 01-1.414 1.414l-2.121-2.12a1 1 0 011.414-1.415zM13 8a5 5 0 110 10 5 5 0 010-10zm12 4a1 1 0 110 2h-3a1 1 0 110-2h3zM4 12a1 1 0 110 2H1a1 1 0 110-2h3zm18.192-8.192a1 1 0 010 1.414l-2.12 2.121a1 1 0 01-1.415-1.414l2.121-2.121a1 1 0 011.414 0zm-16.97 0l2.121 2.12A1 1 0 015.93 7.344L3.808 5.222a1 1 0 011.414-1.414zM13 0a1 1 0 011 1v3a1 1 0 11-2 0V1a1 1 0 011-1z"/></svg>');
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url(../assets/font/josefinSans/JosefinSans-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Josefin Sans";
+  src: url(../assets/font/josefinSans/JosefinSans-Bold.ttf);
+  font-weight: 700;
+}
 body {
   height: 100vh;
   margin: 0;
+  font-family: "Josefin Sans";
+  background: 0 0/100vw 12.5rem linear-gradient(90deg, var(--backgroundColorBodyTopOne), var(--backgroundColorBodyTopTwo)) no-repeat var(--backgroundColorBody);
 }
 
 button,
@@ -452,14 +491,16 @@ p {
   flex-direction: column;
   width: 26.5rem;
   padding: 2rem 1.5rem 0;
-  background-color: red;
 }
 
 .c-header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 2rem;
-  background-color: red;
+  color: var(--colorTitle);
+}
+.c-header__btn-theme::before {
+  content: var(--svgTheme);
 }
 
 .c-form {
@@ -468,11 +509,16 @@ p {
   gap: 1rem;
   margin-bottom: 1rem;
   padding: 1rem 1.25rem;
-  background-color: #b6e6e6;
+  background-color: var(--backgroundColorItem);
+  box-shadow: 0 0 0.5rem var(--colorBoxShadow);
   border-radius: 0.25rem;
 }
 .c-form__input {
   width: 100%;
+  font-family: inherit;
+  font-size: 0.75rem;
+  background-color: transparent;
+  color: var(--colorText);
 }
 
 .c-list {
@@ -482,21 +528,24 @@ p {
   margin: 0;
   padding-left: 0;
   overflow: hidden;
-  border-radius: 0.5rem 0.5rem 0 0;
-  background-color: rgb(134, 199, 134);
+  border-radius: 0.25rem 0.25rem 0 0;
+  background-color: var(--backgroundColorList);
+  box-shadow: 0 0 0.5rem var(--colorBoxShadow);
   list-style: none;
 }
 .c-list__item {
   display: flex;
   gap: 1rem;
   padding: 1rem 1.25rem;
-  background-color: rgb(187, 127, 127);
+  background-color: var(--backgroundColorItem);
+  color: var(--colorText);
 }
 .c-list__task {
   display: flex;
   gap: 1rem;
   justify-content: space-between;
   width: 100%;
+  font-size: 0.75rem;
 }
 
 .c-menu {
@@ -505,17 +554,23 @@ p {
   grid-template-columns: repeat(2, 1fr);
   row-gap: 1rem;
   margin-bottom: 2.75rem;
-  border-top: 1px solid blue;
-  background-color: yellow;
+  font-size: 0.75rem;
+  color: var(--colorTextLight);
+  border-top: 1px solid var(--backgroundColorList);
 }
 .c-menu__number-task {
   padding: 1rem 1.25rem;
-  background-color: aqua;
-  border-bottom-left-radius: 0.5rem;
+  background-color: var(--backgroundColorItem);
+  border-bottom-left-radius: 0.25rem;
+  box-shadow: 0 0 0.5rem var(--colorBoxShadow);
 }
 .c-menu__btn-clear {
-  background-color: blueviolet;
-  border-bottom-right-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  background-color: var(--backgroundColorItem);
+  border-bottom-right-radius: 0.25rem;
+  box-shadow: 0 0 0.5rem var(--colorBoxShadow);
+  font-size: inherit;
+  color: inherit;
 }
 .c-menu__options {
   grid-column-start: 1;
@@ -524,8 +579,12 @@ p {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  border-radius: 0.5rem;
-  background-color: blue;
+  padding: 1rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  background-color: var(--backgroundColorItem);
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0.5rem var(--colorBoxShadow);
 }
 
 .horizontally-centered {
@@ -535,25 +594,41 @@ p {
 
 .aling-center {
   text-align: center;
+  font-size: 0.875rem;
+  color: var(--colorTextLight);
+  padding-bottom: 2rem;
 }
 
 @media screen and (min-width: 768px) {
+  body {
+    background-size: 100vw 18.75rem;
+  }
+
   .c-container {
     width: 33.75rem;
-    padding: 4.75rem 0 0;
+    padding: 5.75rem 0 0;
   }
 
   .c-header {
     margin-bottom: 2.25rem;
+  }
+  .c-header__title {
+    font-size: 2.75rem;
   }
 
   .c-form {
     margin-bottom: 1.25rem;
     padding: 1.25rem 1.5rem;
   }
+  .c-form__input {
+    font-size: 1.125rem;
+  }
 
   .c-list__item {
     padding: 1.25rem 1.5rem;
+  }
+  .c-list__task {
+    font-size: 1.125rem;
   }
 
   .c-menu {
@@ -562,6 +637,7 @@ p {
     grid-template-rows: 1fr;
     grid-template-columns: repeat(3, auto);
     grid-template-areas: "number-task options btn-clear";
+    font-size: 0.875rem;
   }
   .c-menu__number-task {
     grid-area: number-task;
@@ -572,30 +648,23 @@ p {
   .c-menu__options {
     grid-area: options;
     border-radius: 0;
+    font-size: 1rem;
   }
 }
-.theme {
-  --backgroundColorBody: #fafafa;
-  --backgroundColorList: #d2d3db;
-  --backgroundColorItem: #ffffff;
-  --colorText: #9394a5;
-  --colorTextLight: #484b6a;
-  --colorTextLightHover: #484b6a;
-}
-.theme--dark {
-  --backgroundColorBody: #161722;
-  --backgroundColorList: #4d5066;
-  --backgroundColorItem: #25273c;
-  --colorText: #777a92;
-  --colorTextLight: #cacde8;
-  --colorTextLightHover: #e4e5f1;
-}
+@media screen and (min-width: 1024px) {
+  .c-header__btn-theme {
+    cursor: pointer;
+  }
 
+  .c-list__task button {
+    display: none;
+  }
+}
 /* Generic */
+/* Theme */
 /* Elements */
 /* Components */
 /* Utilities */
 /* Responsive */
-/* Theme */
 
 /*# sourceMappingURL=index.css.map */

@@ -1,3 +1,5 @@
+@use '../1.settings/variables';
+
 .c-menu {
   & {
     display: grid;
@@ -5,20 +7,30 @@
     grid-template-columns: repeat(2,1fr);
     row-gap: 1rem;
     margin-bottom: 2.75rem;
+    
+    font-size: variables.$fs-text-s;
 
-    border-top: 1px solid blue;
-    background-color: yellow;
+    color: var(--colorTextLight);
+    border-top: 1px solid var(--backgroundColorList);
   }
 
   &__number-task {
     padding: 1rem 1.25rem;
-    background-color: aqua;
-    border-bottom-left-radius: .5rem;
+
+    background-color: var(--backgroundColorItem);
+    border-bottom-left-radius: .25rem;
+    box-shadow: 0 0 .5rem var(--colorBoxShadow);
   }
 
   &__btn-clear {
-    background-color: blueviolet;
-    border-bottom-right-radius: .5rem;
+    padding: 1rem 1.25rem;
+    
+    background-color: var(--backgroundColorItem);
+    border-bottom-right-radius: .25rem;
+    box-shadow: 0 0 .5rem var(--colorBoxShadow);
+
+    font-size: inherit;
+    color:inherit;
   }
 
   &__options {
@@ -29,8 +41,13 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    padding: 1rem 1.25rem;
     
-    border-radius: 0.5rem;    
-    background-color: blue;
+    font-size: variables.$fs-text-m;
+    font-weight: 700;
+
+    background-color: var(--backgroundColorItem);
+    border-radius: 0.25rem;    
+    box-shadow: 0 0 .5rem var(--colorBoxShadow);
   }
 }

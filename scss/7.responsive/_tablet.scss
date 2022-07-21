@@ -1,20 +1,32 @@
 @use "../1.settings/variables";
 
 @media screen and (min-width: 768px) {
+  body {
+    background-size: 100vw 18.75rem;
+  }
   .c-container {
     width: variables.$size-desktop;
     padding: variables.$spacing-container-top-m 0 0;
   }
   .c-header {
     margin-bottom: 2.25rem;
+    &__title {
+      font-size: variables.$fs-title-m;
+    }
   }
   .c-form {
     margin-bottom: 1.25rem;
     padding: 1.25rem 1.5rem;
+    &__input {
+      font-size: variables.$fs-text-xl;
+    }
   }
   .c-list {
     &__item {
       padding: 1.25rem 1.5rem;
+    }
+    &__task {
+      font-size: variables.$fs-text-xl;
     }
   }
   .c-menu {
@@ -25,6 +37,8 @@
       grid-template-columns: repeat(3,auto);
       grid-template-areas: 
         'number-task options btn-clear';
+
+      font-size: variables.$fs-text-m;
     }
     &__number-task {
       grid-area: number-task;
@@ -35,6 +49,8 @@
     &__options {
       grid-area: options;
       border-radius: 0;
+
+      font-size: variables.$fs-text-l;
     }
   }
 }

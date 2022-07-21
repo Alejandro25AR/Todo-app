@@ -1,0 +1,12 @@
+@media screen and (min-width: 1024px) {
+    .c-header{
+        &__btn-theme {
+            cursor: pointer;
+        }
+    }
+    .c-list {
+        &__task button{
+            display: none;
+        }
+    }
+}

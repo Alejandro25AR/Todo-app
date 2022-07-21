@@ -1,3 +1,5 @@
+@use '../1.settings/variables';
+
 .c-form {
     display: flex;
     flex-direction: row-reverse;
@@ -5,10 +7,15 @@
     margin-bottom: 1rem;
     padding: 1rem 1.25rem;
     
-    background-color: #b6e6e6;
+    background-color: var(--backgroundColorItem);
+    box-shadow: 0 0 .5rem var(--colorBoxShadow);
     border-radius: .25rem;
 
     &__input {
-        width: 100%;
+      width: 100%;
+      font-family: inherit;
+      font-size: variables.$fs-text-s;
+      background-color: transparent;
+      color: var(--colorText);
     }
 }

@@ -3,7 +3,9 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 2rem;
-    
-    background-color: red;
+    color: var(--colorTitle);
+  }
+  &__btn-theme::before{
+    content: var(--svgTheme);
   }
 }

@@ -3,4 +3,7 @@
 body {
    height: 100vh;
    margin: 0;
+
+   font-family: 'Josefin Sans';
+   background: 0 0 / 100vw 12.5rem linear-gradient(90deg, var(--backgroundColorBodyTopOne), var(--backgroundColorBodyTopTwo)) no-repeat var(--backgroundColorBody);
 }

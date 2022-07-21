@@ -2,6 +2,9 @@
 @use '2.generic/normalize';
 @use '2.generic/box-sizing';
 
+/* Theme */
+@use '8.theme/theme';
+
 /* Elements */
 @use '3.elements/body';
 @use '3.elements/buttons';
@@ -22,6 +25,4 @@
 
 /* Responsive */
 @use '7.responsive/tablet';
-
-/* Theme */
-@use '8.theme/theme';
+@use '7.responsive/desktop';

@@ -1,3 +1,5 @@
+@use '../1.settings/variables';
+
 .horizontally-centered {
     display: flex;
     justify-content: center;
@@ -5,4 +7,7 @@
 
 .aling-center {
     text-align: center;
+    font-size: variables.$fs-text-m;
+    color: var(--colorTextLight);
+    padding-bottom: 2rem;
 }
