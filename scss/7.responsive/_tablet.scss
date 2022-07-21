@@ -34,23 +34,23 @@
       row-gap: 1.25rem;
       margin-bottom: 3.25rem;
       grid-template-rows: 1fr;
-      grid-template-columns: repeat(3,auto);
-      grid-template-areas: 
-        'number-task options btn-clear';
+      grid-template-columns: 1fr 2fr 1fr;
 
       font-size: variables.$fs-text-m;
     }
-    &__number-task {
-      grid-area: number-task;
+    &__top {
+      grid-row: 1 / 2;
+      grid-column: 1 / 4;
+      align-items: center;
     }
-    &__btn-clear {
-      grid-area: btn-clear;
-    } 
-    &__options {
-      grid-area: options;
-      border-radius: 0;
+    &__bottom {
+      grid-row: 1 / 2;
+      grid-column: 2 / 3;
 
       font-size: variables.$fs-text-l;
+      
+      border-radius: 0;
+      box-shadow: none;
     }
   }
 }
