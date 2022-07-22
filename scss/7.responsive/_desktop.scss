@@ -15,8 +15,25 @@
   .c-list {
     &__task {
       animation: text-decoration 2s ease color 2s ease; 
-      & button {
-        display: none;
+    }
+    &__btn-delete {
+      opacity: 0;
+      cursor: pointer;
+    }
+  }
+  .c-menu {
+    &__btn-clear {
+      cursor: pointer;
+      &:hover {
+        color: var(--colorTextLightHover);
+      }
+    } 
+    &__option {
+      & label{
+        cursor: pointer;
+      }
+      &:hover {
+        color: var(--colorTextLightHover);
       }
     }
   }

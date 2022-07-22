@@ -28,6 +28,9 @@
     &__task {
       font-size: variables.$fs-text-xl;
     }
+    &__btn-delete {
+      transform: scale(1);
+    }
   }
   .c-menu {
     & {

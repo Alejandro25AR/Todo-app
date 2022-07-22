@@ -20,6 +20,7 @@
   &__btn-clear {  
     font-size: inherit;
     color:inherit;
+    transition: color .2s ease-in;
   }
 
   &__top {
@@ -52,6 +53,12 @@
   &__option {
     & input[type=radio] {
       display: none;
+    }
+    & label {
+      transition: color .5s ease;
+    }
+    & input[type=radio]:checked + label {
+      color: variables.$selectedOption;
     }
   }
 }
