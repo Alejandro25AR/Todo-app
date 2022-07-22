@@ -18,6 +18,8 @@
     &__item {
         display: flex;
         gap: 1rem;
+        justify-content: center;
+        align-items: center;
         padding: 1rem 1.25rem;
 
         background-color: var(--backgroundColorItem);
@@ -28,8 +30,10 @@
         display: flex;
         gap: 1rem;
         justify-content: space-between;
+        align-items: center;
         width: 100%;
 
         font-size: variables.$fs-text-s;
+        transition: color 1s ease, text-decoration 1s ease ;
     }
 }

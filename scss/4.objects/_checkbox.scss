@@ -1,0 +1,49 @@
+.o-checkbox {
+  & {
+    display: none;
+  }
+
+  & + label {
+    & {
+      position: relative;
+      display: block;
+    }
+
+    &::before {
+      content: " ";
+      position: absolute;
+      left: 1px;
+      top:1px;
+      padding: 9px;
+      background-color: var(--backgroundColorItem);
+      border-radius: 1rem;
+    }
+
+    &::after {
+      content: url('data:image/svg+xml;charset=UTF-8, <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.3361 0.292786C8.94548 -0.0975952 8.31267 -0.0975952 7.92204 0.292786L3.51872 4.69586L1.87809 3.11163C1.48063 2.72784 0.847821 2.73907 0.464032 3.13629L0.280439 3.32599C-0.10335 3.72321 -0.0916317 4.35626 0.305829 4.73981L1.9113 6.30328L2.80388 7.19562C3.1945 7.58624 3.82731 7.58624 4.21794 7.19562L9.52165 1.8924C9.91227 1.50177 9.91227 0.868713 9.52165 0.478088L9.3361 0.292786Z" fill="white"/></svg>');
+      display: flex;
+      justify-content: center;
+      align-items: center;;
+      width: 1.25rem;
+      height: 1.25rem;
+      overflow: hidden;
+
+      text-align: center;
+      
+      background: var(--backgroundColorList);
+      border-radius: 1rem;
+    }
+  }
+  &:checked {
+    & ~ .c-list__task {
+      color: var(--colorTextLight);
+      text-decoration: line-through;
+    }
+    & + label::after{
+      background: linear-gradient(to right bottom,#57ddff, #c058f3);
+    }
+    & + label::before {
+      background-color: transparent;
+    }
+  }
+}

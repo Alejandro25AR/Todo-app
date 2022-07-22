@@ -1,12 +1,23 @@
 @media screen and (min-width: 1024px) {
-    .c-header{
-        &__btn-theme {
-            cursor: pointer;
-        }
+  .o-checkbox {
+    & + label {
+      cursor: pointer;
     }
-    .c-list {
-        &__task button{
-            display: none;
-        }
+    &:hover + label::after{
+      background: linear-gradient(to right bottom,#57ddff, #c058f3);
     }
+  }
+  .c-header {
+    &__btn-theme {
+      cursor: pointer;
+    }
+  }
+  .c-list {
+    &__task {
+      animation: text-decoration 2s ease color 2s ease; 
+      & button {
+        display: none;
+      }
+    }
+  }
 }
