@@ -14,7 +14,6 @@ This is a solution to the [Todo app challenge on Frontend Mentor](https://www.fr
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -38,11 +37,11 @@ Users should be able to:
 
 #### Solution of the challenge view on mobile, tablet and desktop devices
 
-![Solution of the challenge view on mobile, tablet and desktop devices](./solution.png)
+![Solution of the challenge view on mobile, tablet and desktop devices](./assets/images/solution.png)
 
 #### Active states of solution
 
-![Active states of solution](./activeStates.png)
+![Active states of solution](./assets/images/activeStates.png)
 
 ### Links
 
@@ -62,6 +61,7 @@ Users should be able to:
   - Modules
   - Fragments
   - Local Storge
+  - setTimeout
 
 ### What I learned
 
@@ -107,4 +107,3 @@ $ul.appendChild($fragment);
 ## Author
 
 - Frontend Mentor - [@Alejandro25AR](https://www.frontendmentor.io/profile/Alejandro25AR)
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
