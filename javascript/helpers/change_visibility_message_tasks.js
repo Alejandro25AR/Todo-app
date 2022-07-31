@@ -15,7 +15,6 @@ const changeVisibilityMessageTasks = ($listTaskHTML) => {
     let thereAreVisibleTask = listTaskHTML.some((task) => {
       return !task.classList.contains("hidden");
     });
-    console.log(thereAreVisibleTask)
     thereAreVisibleTask 
     ? $withotTasks.classList.add("hidden")
     : $withotTasks.classList.remove("hidden");
