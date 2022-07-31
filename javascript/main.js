@@ -118,6 +118,7 @@ window.addEventListener("load", () => {
     if (e.target.matches(".o-checkbox")) {
       if (e.target.closest(".c-list__item")) {
         handlerChangeCheckbox(e.target, filters.value,$listTaskHTML);
+        updateItemsLeft($listTaskHTML);
       }
     }
     /* Clear completed tasks */
