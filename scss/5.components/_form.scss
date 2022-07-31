@@ -1,21 +1,23 @@
-@use '../1.settings/variables';
+@use "../1.settings/variables";
 
 .c-form {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    padding: 1rem 1.25rem;
-    
-    background-color: var(--backgroundColorItem);
-    box-shadow: 0 0 .5rem var(--colorBoxShadow);
-    border-radius: .25rem;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem 1.25rem;
 
-    &__input {
-      width: 100%;
-      font-family: inherit;
-      font-size: variables.$fs-text-s;
-      background-color: transparent;
-      color: var(--colorText);
-    }
+  background-color: var(--backgroundColorItem);
+  box-shadow: 0 0 0.5rem var(--colorBoxShadow);
+  border-radius: 0.25rem;
+
+  transition: background-color 2s ease;
+
+  &__input {
+    width: 100%;
+    font-family: inherit;
+    font-size: variables.$fs-text-s;
+    background-color: transparent;
+    color: var(--colorText);
+  }
 }

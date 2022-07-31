@@ -1,13 +1,15 @@
-@use '../1.settings/variables';
+@use "../1.settings/variables";
 
 .horizontally-centered {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-.aling-center {
-    text-align: center;
-    font-size: variables.$fs-text-m;
-    color: var(--colorTextLight);
-    padding-bottom: 2rem;
+.hidden {
+  display: none;
+}
+
+.border {
+  outline: variables.$selectedOption dashed 2px;
+  outline-offset: -0.5rem;
 }

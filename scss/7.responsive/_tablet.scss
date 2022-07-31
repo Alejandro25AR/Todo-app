@@ -7,6 +7,11 @@
   .c-container {
     width: variables.$size-desktop;
     padding: variables.$spacing-container-top-m 0 0;
+
+    &__without-tasks {
+      padding: 1.25rem 1.5rem;
+      font-size: variables.$fs-text-xl;
+    }
   }
   .c-header {
     margin-bottom: 2.25rem;
@@ -51,7 +56,7 @@
       grid-column: 2 / 3;
 
       font-size: variables.$fs-text-l;
-      
+
       border-radius: 0;
       box-shadow: none;
     }

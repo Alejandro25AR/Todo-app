@@ -20,7 +20,7 @@
   &__btn-clear {  
     font-size: inherit;
     color:inherit;
-    transition: color .2s ease-in;
+    transition: color .3s ease-in;
   }
 
   &__top {
@@ -32,6 +32,8 @@
     background-color: var(--backgroundColorItem);
     border-radius: 0 0 .25rem .25rem;
     box-shadow: 0 2px .5rem var(--colorBoxShadow);
+
+    transition: background-color 2s ease;
   }
 
   &__bottom{
@@ -48,6 +50,8 @@
     background-color: var(--backgroundColorItem);
     border-radius: 0.25rem;    
     box-shadow: 0 0 .5rem var(--colorBoxShadow);
+
+    transition: background-color 2s ease;
   }
   
   &__option {
@@ -55,7 +59,7 @@
       display: none;
     }
     & label {
-      transition: color .5s ease;
+      transition: color .3s ease;
     }
     & input[type=radio]:checked + label {
       color: variables.$selectedOption;

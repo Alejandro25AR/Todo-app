@@ -5,116 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
+    <script src="javascript/main.js" type="module"></script>
     <title>TODO</title>
 </head>
-<body class="horizontally-centered theme">
+<body id="body" class="horizontally-centered theme">
     <div class="c-container">
         <header class="c-header">
             <h1 class="c-header__title">TODO</h1>
-            <button class="c-header__btn-theme" title="Change color theme"></button>
+            <button class="c-header__btn-theme" id="btn-change-theme" ar></button>
         </header>
         <main>
             <form class="c-form">
-                <input class="c-form__input" type="text" placeholder="Create a new todo...">
-                <input class="c-form__add o-checkbox" type="checkbox" id="add">
-                <label for="add"></label>
+                <input id="task-input" class="c-form__input" type="text" placeholder="Create a new todo..." value="">
+                <input id="btn-add-task" class="c-form__add o-checkbox" type="checkbox">
+                <label for="btn-add-task"></label>
             </form>
-            <ul class="c-list">
-                <li class="c-list__item">
-                    <input class="o-checkbox" type="checkbox" id="task1">
-                    <label for="task1"></label>
-                    <div class="c-list__task">
-                        <p>Complete online JavaScript course</p>
-                        <button class="c-list__btn-delete" title="Delete task">
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M18.0312 1.0607C17.4453 0.474884 16.4961 0.474884 15.9102 1.0607L9.5459 7.42484L3.18164 1.0607C2.59668 0.474884 1.64648 0.474884 1.06055 1.0607C0.474609 1.64651 0.474609 2.59622 1.06055 3.18204L7.4248 9.54593L1.06055 15.9099C0.474609 16.4958 0.474609 17.4455 1.06055 18.0313C1.64648 18.6171 2.59668 18.6171 3.18164 18.0313L9.5459 11.6671L15.9102 18.0313C16.4961 18.6171 17.4453 18.6171 18.0312 18.0313C18.6172 17.4455 18.6172 16.4958 18.0312 15.9099L11.667 9.54593L18.0312 3.18204C18.6172 2.59622 18.6172 1.64651 18.0312 1.0607Z" fill="#D9D9D9"/>
-                            </svg>
-                        </button>
-                    </div>
-                </li>
-                <li class="c-list__item">
-                    <input class="o-checkbox" type="checkbox" id="task2">
-                    <label for="task2"></label>
-                    <div class="c-list__task">
-                        <p>Jog around the park x3</p>
-                        <button class="c-list__btn-delete" title="Delete task">
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M18.0312 1.0607C17.4453 0.474884 16.4961 0.474884 15.9102 1.0607L9.5459 7.42484L3.18164 1.0607C2.59668 0.474884 1.64648 0.474884 1.06055 1.0607C0.474609 1.64651 0.474609 2.59622 1.06055 3.18204L7.4248 9.54593L1.06055 15.9099C0.474609 16.4958 0.474609 17.4455 1.06055 18.0313C1.64648 18.6171 2.59668 18.6171 3.18164 18.0313L9.5459 11.6671L15.9102 18.0313C16.4961 18.6171 17.4453 18.6171 18.0312 18.0313C18.6172 17.4455 18.6172 16.4958 18.0312 15.9099L11.667 9.54593L18.0312 3.18204C18.6172 2.59622 18.6172 1.64651 18.0312 1.0607Z" fill="#D9D9D9"/>
-                            </svg>
-                        </button>
-                    </div>
-                </li>
-                <li class="c-list__item">
-                    <input class="o-checkbox" type="checkbox" id="task3">
-                    <label for="task3"></label>
-                    <div class="c-list__task">
-                        <p>10 minutes meditation</p>
-                        <button class="c-list__btn-delete" title="Delete task">
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M18.0312 1.0607C17.4453 0.474884 16.4961 0.474884 15.9102 1.0607L9.5459 7.42484L3.18164 1.0607C2.59668 0.474884 1.64648 0.474884 1.06055 1.0607C0.474609 1.64651 0.474609 2.59622 1.06055 3.18204L7.4248 9.54593L1.06055 15.9099C0.474609 16.4958 0.474609 17.4455 1.06055 18.0313C1.64648 18.6171 2.59668 18.6171 3.18164 18.0313L9.5459 11.6671L15.9102 18.0313C16.4961 18.6171 17.4453 18.6171 18.0312 18.0313C18.6172 17.4455 18.6172 16.4958 18.0312 15.9099L11.667 9.54593L18.0312 3.18204C18.6172 2.59622 18.6172 1.64651 18.0312 1.0607Z" fill="#D9D9D9"/>
-                            </svg>
-                        </button>
-                    </div>
-                </li>
-                <li class="c-list__item">
-                    <input class="o-checkbox" type="checkbox" id="task4">
-                    <label for="task4"></label>
-                    <div class="c-list__task">
-                        <p>Read for 1 hour</p>
-                        <button class="c-list__btn-delete" title="Delete task">
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M18.0312 1.0607C17.4453 0.474884 16.4961 0.474884 15.9102 1.0607L9.5459 7.42484L3.18164 1.0607C2.59668 0.474884 1.64648 0.474884 1.06055 1.0607C0.474609 1.64651 0.474609 2.59622 1.06055 3.18204L7.4248 9.54593L1.06055 15.9099C0.474609 16.4958 0.474609 17.4455 1.06055 18.0313C1.64648 18.6171 2.59668 18.6171 3.18164 18.0313L9.5459 11.6671L15.9102 18.0313C16.4961 18.6171 17.4453 18.6171 18.0312 18.0313C18.6172 17.4455 18.6172 16.4958 18.0312 15.9099L11.667 9.54593L18.0312 3.18204C18.6172 2.59622 18.6172 1.64651 18.0312 1.0607Z" fill="#D9D9D9"/>
-                            </svg>
-                        </button>
-                    </div>
-                </li>
-                <li class="c-list__item">
-                    <input class="o-checkbox" type="checkbox" id="task5">
-                    <label for="task5"></label>
-                    <div class="c-list__task">
-                        <p>Pick up groceries</p>
-                        <button class="c-list__btn-delete" title="Delete task">
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M18.0312 1.0607C17.4453 0.474884 16.4961 0.474884 15.9102 1.0607L9.5459 7.42484L3.18164 1.0607C2.59668 0.474884 1.64648 0.474884 1.06055 1.0607C0.474609 1.64651 0.474609 2.59622 1.06055 3.18204L7.4248 9.54593L1.06055 15.9099C0.474609 16.4958 0.474609 17.4455 1.06055 18.0313C1.64648 18.6171 2.59668 18.6171 3.18164 18.0313L9.5459 11.6671L15.9102 18.0313C16.4961 18.6171 17.4453 18.6171 18.0312 18.0313C18.6172 17.4455 18.6172 16.4958 18.0312 15.9099L11.667 9.54593L18.0312 3.18204C18.6172 2.59622 18.6172 1.64651 18.0312 1.0607Z" fill="#D9D9D9"/>
-                            </svg>
-                        </button>
-                    </div>
-                </li>
-                <li class="c-list__item">
-                    <input class="o-checkbox" type="checkbox" id="task6">
-                    <label for="task6"></label>
-                    <div class="c-list__task">
-                        <p>Completed Todo App on Frontend Mentor</p>
-                        <button class="c-list__btn-delete" title="Delete task">
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M18.0312 1.0607C17.4453 0.474884 16.4961 0.474884 15.9102 1.0607L9.5459 7.42484L3.18164 1.0607C2.59668 0.474884 1.64648 0.474884 1.06055 1.0607C0.474609 1.64651 0.474609 2.59622 1.06055 3.18204L7.4248 9.54593L1.06055 15.9099C0.474609 16.4958 0.474609 17.4455 1.06055 18.0313C1.64648 18.6171 2.59668 18.6171 3.18164 18.0313L9.5459 11.6671L15.9102 18.0313C16.4961 18.6171 17.4453 18.6171 18.0312 18.0313C18.6172 17.4455 18.6172 16.4958 18.0312 15.9099L11.667 9.54593L18.0312 3.18204C18.6172 2.59622 18.6172 1.64651 18.0312 1.0607Z" fill="#D9D9D9"/>
-                            </svg>
-                        </button>
-                    </div>
-                </li>
+            <div class="c-container__without-tasks hidden" id="withot-tasks">
+                <p>No hay tareas disponibles</p>
+            </div>
+            <ul class="c-list" id="task-list">
+                
             </ul>
             <div class="c-menu">
                 <div class="c-menu__top">
-                    <span class="c-menu__number-task">items left</span>
-                    <button class="c-menu__btn-clear">Clear Completed</button>
+                    <p class="c-menu__number-task"><span id="items-left"></span> items left</p>
+                    <button class="c-menu__btn-clear" id="clear-completed">Clear Completed</button>
                 </div>
                 <div class="c-menu__bottom">
                     <div class="c-menu__option">
-                        <input type="radio" name="hola" id="all" value="1">
+                        <input type="radio" name="filterList" id="all" value="all" checked>
                         <label for="all">All</label>
                     </div>
                     <div class="c-menu__option">
-                        <input type="radio" name="hola" id="active" value="2">
+                        <input type="radio" name="filterList" id="active" value="active">
                         <label for="active">Active</label>
                     </div>
                     <div class="c-menu__option">
-                        <input type="radio" name="hola" id="completed" value="3">
+                        <input type="radio" name="filterList" id="completed" value="completed">
                         <label for="completed">Completed</label>
                     </div>
                 </div>
             </div>
         </main>
-        <p class="aling-center">Drag and drop to reorder list</p>
+        <p class="c-container__message">Drag and drop to reorder list</p>
     </div>
+    <template id="template-task">
+        <li class="c-list__item" draggable="true">
+            <input class="o-checkbox" type="checkbox" id="">
+            <label for=""></label>
+            <div class="c-list__task">
+                <p></p>
+                <button class="c-list__btn-delete" title="Delete task">
+                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.0312 1.0607C17.4453 0.474884 16.4961 0.474884 15.9102 1.0607L9.5459 7.42484L3.18164 1.0607C2.59668 0.474884 1.64648 0.474884 1.06055 1.0607C0.474609 1.64651 0.474609 2.59622 1.06055 3.18204L7.4248 9.54593L1.06055 15.9099C0.474609 16.4958 0.474609 17.4455 1.06055 18.0313C1.64648 18.6171 2.59668 18.6171 3.18164 18.0313L9.5459 11.6671L15.9102 18.0313C16.4961 18.6171 17.4453 18.6171 18.0312 18.0313C18.6172 17.4455 18.6172 16.4958 18.0312 15.9099L11.667 9.54593L18.0312 3.18204C18.6172 2.59622 18.6172 1.64651 18.0312 1.0607Z" fill="#D9D9D9"/>
+                    </svg>
+                </button>
+            </div>
+        </li>
+    </template>
 </body>
 </html>

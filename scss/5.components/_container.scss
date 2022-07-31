@@ -1,8 +1,28 @@
-@use '../1.settings/variables';
+@use "../1.settings/variables";
 
 .c-container {
-  display: flex;
-  flex-direction: column;
-  width: calc(variables.$size-movil + calc(variables.$spacing-container-sides * 2));
-  padding: variables.$spacing-container-top-s variables.$spacing-container-sides  0;  
+  & {
+    display: flex;
+    flex-direction: column;
+    width: calc(
+      variables.$size-movil + calc(variables.$spacing-container-sides * 2)
+    );
+    padding: variables.$spacing-container-top-s
+      variables.$spacing-container-sides 0;
+  }
+
+  &__without-tasks {
+    text-align: center;
+    padding: 1rem 1.25rem;
+    background-color: var(--backgroundColorItem);
+    box-shadow: 0 0 .5rem var(--colorBoxShadow);
+    font-size: variables.$fs-text-m;
+    color: var(--colorText);
+    border-radius: 0.25rem 0.25rem 0 0;
+    transition: color 1s ease, background-color 2s ease;
+  }
+
+  &__message {
+    display: none;
+  }
 }

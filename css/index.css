@@ -415,33 +415,62 @@ template {
   box-sizing: border-box;
 }
 
-.theme {
-  --backgroundColorBody: #fafafa;
-  --backgroundColorList: #d2d3db;
-  --backgroundColorItem: #ffffff;
-  --colorText: #484b6a;
-  --colorTextLight: #97969B;
-  --colorTextLightHover: #484b6a;
-  --backgroundColorBodyTopOne: #BB5CF6;
-  --backgroundColorBodyTopTwo: #71A5FB;
-  --colorBoxShadow: #b6b6b6;
-  --colorTitle: #F8FCFD;
-  --svgTheme: url('data:image/svg+xml;charset=UTF-8, <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" ><path fill="rgb(255,255,255)" fill-rule="evenodd" d="M13 0c.81 0 1.603.074 2.373.216C10.593 1.199 7 5.43 7 10.5 7 16.299 11.701 21 17.5 21c2.996 0 5.7-1.255 7.613-3.268C23.22 22.572 18.51 26 13 26 5.82 26 0 20.18 0 13S5.82 0 13 0z"/></svg>');
+@media (prefers-color-scheme: dark) {
+  .theme {
+    --backgroundColorBody: #161722;
+    --backgroundColorList: #404259;
+    --backgroundColorItem: #25273c;
+    --colorText: #cacde8;
+    --colorTextLight: #777a92;
+    --colorTextLightHover: #e4e5f1;
+    --backgroundColorBodyTopOne: #2E1FAC;
+    --backgroundColorBodyTopTwo: #781C73;
+    --colorBoxShadow: none;
+    --colorTitle: #FDFDFF;
+    --svgTheme: url('data:image/svg+xml;charset=UTF-8, <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"><path fill="rgb(255,255,255)" fill-rule="evenodd" d="M13 21a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-5.657-2.343a1 1 0 010 1.414l-2.121 2.121a1 1 0 01-1.414-1.414l2.12-2.121a1 1 0 011.415 0zm12.728 0l2.121 2.121a1 1 0 01-1.414 1.414l-2.121-2.12a1 1 0 011.414-1.415zM13 8a5 5 0 110 10 5 5 0 010-10zm12 4a1 1 0 110 2h-3a1 1 0 110-2h3zM4 12a1 1 0 110 2H1a1 1 0 110-2h3zm18.192-8.192a1 1 0 010 1.414l-2.12 2.121a1 1 0 01-1.415-1.414l2.121-2.121a1 1 0 011.414 0zm-16.97 0l2.121 2.12A1 1 0 015.93 7.344L3.808 5.222a1 1 0 011.414-1.414zM13 0a1 1 0 011 1v3a1 1 0 11-2 0V1a1 1 0 011-1z"/></svg>');
+  }
+  .theme--invert {
+    --backgroundColorBody: #fafafa;
+    --backgroundColorList: #d2d3db;
+    --backgroundColorItem: #ffffff;
+    --colorText: #484b6a;
+    --colorTextLight: #97969B;
+    --colorTextLightHover: #484b6a;
+    --backgroundColorBodyTopOne: #BB5CF6;
+    --backgroundColorBodyTopTwo: #71A5FB;
+    --colorBoxShadow: #b6b6b6;
+    --colorTitle: #F8FCFD;
+    --svgTheme: url('data:image/svg+xml;charset=UTF-8, <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" ><path fill="rgb(255,255,255)" fill-rule="evenodd" d="M13 0c.81 0 1.603.074 2.373.216C10.593 1.199 7 5.43 7 10.5 7 16.299 11.701 21 17.5 21c2.996 0 5.7-1.255 7.613-3.268C23.22 22.572 18.51 26 13 26 5.82 26 0 20.18 0 13S5.82 0 13 0z"/></svg>');
+  }
 }
-.theme--dark {
-  --backgroundColorBody: #161722;
-  --backgroundColorList: #404259;
-  --backgroundColorItem: #25273c;
-  --colorText: #cacde8;
-  --colorTextLight: #777a92;
-  --colorTextLightHover: #e4e5f1;
-  --backgroundColorBodyTopOne: #2E1FAC;
-  --backgroundColorBodyTopTwo: #781C73;
-  --colorBoxShadow: none;
-  --colorTitle: #FDFDFF;
-  --svgTheme: url('data:image/svg+xml;charset=UTF-8, <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"><path fill="rgb(255,255,255)" fill-rule="evenodd" d="M13 21a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-5.657-2.343a1 1 0 010 1.414l-2.121 2.121a1 1 0 01-1.414-1.414l2.12-2.121a1 1 0 011.415 0zm12.728 0l2.121 2.121a1 1 0 01-1.414 1.414l-2.121-2.12a1 1 0 011.414-1.415zM13 8a5 5 0 110 10 5 5 0 010-10zm12 4a1 1 0 110 2h-3a1 1 0 110-2h3zM4 12a1 1 0 110 2H1a1 1 0 110-2h3zm18.192-8.192a1 1 0 010 1.414l-2.12 2.121a1 1 0 01-1.415-1.414l2.121-2.121a1 1 0 011.414 0zm-16.97 0l2.121 2.12A1 1 0 015.93 7.344L3.808 5.222a1 1 0 011.414-1.414zM13 0a1 1 0 011 1v3a1 1 0 11-2 0V1a1 1 0 011-1z"/></svg>');
+@media (prefers-color-scheme: light) {
+  .theme {
+    --backgroundColorBody: #fafafa;
+    --backgroundColorList: #d2d3db;
+    --backgroundColorItem: #ffffff;
+    --colorText: #484b6a;
+    --colorTextLight: #97969B;
+    --colorTextLightHover: #484b6a;
+    --backgroundColorBodyTopOne: #BB5CF6;
+    --backgroundColorBodyTopTwo: #71A5FB;
+    --colorBoxShadow: #b6b6b6;
+    --colorTitle: #F8FCFD;
+    --svgTheme: url('data:image/svg+xml;charset=UTF-8, <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" ><path fill="rgb(255,255,255)" fill-rule="evenodd" d="M13 0c.81 0 1.603.074 2.373.216C10.593 1.199 7 5.43 7 10.5 7 16.299 11.701 21 17.5 21c2.996 0 5.7-1.255 7.613-3.268C23.22 22.572 18.51 26 13 26 5.82 26 0 20.18 0 13S5.82 0 13 0z"/></svg>');
+  }
+  .theme--invert {
+    --backgroundColorBody: #161722;
+    --backgroundColorList: #404259;
+    --backgroundColorItem: #25273c;
+    --colorText: #cacde8;
+    --colorTextLight: #777a92;
+    --colorTextLightHover: #e4e5f1;
+    --backgroundColorBodyTopOne: #2E1FAC;
+    --backgroundColorBodyTopTwo: #781C73;
+    --colorBoxShadow: none;
+    --colorTitle: #FDFDFF;
+    --svgTheme: url('data:image/svg+xml;charset=UTF-8, <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"><path fill="rgb(255,255,255)" fill-rule="evenodd" d="M13 21a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-5.657-2.343a1 1 0 010 1.414l-2.121 2.121a1 1 0 01-1.414-1.414l2.12-2.121a1 1 0 011.415 0zm12.728 0l2.121 2.121a1 1 0 01-1.414 1.414l-2.121-2.12a1 1 0 011.414-1.415zM13 8a5 5 0 110 10 5 5 0 010-10zm12 4a1 1 0 110 2h-3a1 1 0 110-2h3zM4 12a1 1 0 110 2H1a1 1 0 110-2h3zm18.192-8.192a1 1 0 010 1.414l-2.12 2.121a1 1 0 01-1.415-1.414l2.121-2.121a1 1 0 011.414 0zm-16.97 0l2.121 2.12A1 1 0 015.93 7.344L3.808 5.222a1 1 0 011.414-1.414zM13 0a1 1 0 011 1v3a1 1 0 11-2 0V1a1 1 0 011-1z"/></svg>');
+  }
 }
-
 @font-face {
   font-family: "Josefin Sans";
   src: url(../assets/font/josefinSans/JosefinSans-Regular.ttf);
@@ -457,6 +486,7 @@ body {
   margin: 0;
   font-family: "Josefin Sans";
   background: 0 0/100vw 12.5rem linear-gradient(90deg, var(--backgroundColorBodyTopOne), var(--backgroundColorBodyTopTwo)) no-repeat var(--backgroundColorBody);
+  transition: background-color 2s ease;
 }
 
 button,
@@ -531,6 +561,19 @@ p {
   width: 26.5rem;
   padding: 2rem 1.5rem 0;
 }
+.c-container__without-tasks {
+  text-align: center;
+  padding: 1rem 1.25rem;
+  background-color: var(--backgroundColorItem);
+  box-shadow: 0 0 0.5rem var(--colorBoxShadow);
+  font-size: 0.875rem;
+  color: var(--colorText);
+  border-radius: 0.25rem 0.25rem 0 0;
+  transition: color 1s ease, background-color 2s ease;
+}
+.c-container__message {
+  display: none;
+}
 
 .c-header {
   display: flex;
@@ -551,6 +594,7 @@ p {
   background-color: var(--backgroundColorItem);
   box-shadow: 0 0 0.5rem var(--colorBoxShadow);
   border-radius: 0.25rem;
+  transition: background-color 2s ease;
 }
 .c-form__input {
   width: 100%;
@@ -580,6 +624,7 @@ p {
   padding: 1rem 1.25rem;
   background-color: var(--backgroundColorItem);
   color: var(--colorText);
+  transition: background-color 2s ease;
 }
 .c-list__task {
   display: flex;
@@ -614,7 +659,7 @@ p {
 .c-menu__btn-clear {
   font-size: inherit;
   color: inherit;
-  transition: color 0.2s ease-in;
+  transition: color 0.3s ease-in;
 }
 .c-menu__top {
   grid-column: 1/3;
@@ -624,6 +669,7 @@ p {
   background-color: var(--backgroundColorItem);
   border-radius: 0 0 0.25rem 0.25rem;
   box-shadow: 0 2px 0.5rem var(--colorBoxShadow);
+  transition: background-color 2s ease;
 }
 .c-menu__bottom {
   grid-column: 1/3;
@@ -637,12 +683,13 @@ p {
   background-color: var(--backgroundColorItem);
   border-radius: 0.25rem;
   box-shadow: 0 0 0.5rem var(--colorBoxShadow);
+  transition: background-color 2s ease;
 }
 .c-menu__option input[type=radio] {
   display: none;
 }
 .c-menu__option label {
-  transition: color 0.5s ease;
+  transition: color 0.3s ease;
 }
 .c-menu__option input[type=radio]:checked + label {
   color: #3a7bfd;
@@ -653,11 +700,13 @@ p {
   justify-content: center;
 }
 
-.aling-center {
-  text-align: center;
-  font-size: 0.875rem;
-  color: var(--colorTextLight);
-  padding-bottom: 2rem;
+.hidden {
+  display: none;
+}
+
+.border {
+  outline: #3a7bfd dashed 2px;
+  outline-offset: -0.5rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -668,6 +717,10 @@ p {
   .c-container {
     width: 33.75rem;
     padding: 5.75rem 0 0;
+  }
+  .c-container__without-tasks {
+    padding: 1.25rem 1.5rem;
+    font-size: 1.125rem;
   }
 
   .c-header {
@@ -715,7 +768,7 @@ p {
     box-shadow: none;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 960px) {
   .o-checkbox + label {
     cursor: pointer;
   }
@@ -723,16 +776,35 @@ p {
     background: linear-gradient(to right bottom, #57ddff, #c058f3);
   }
 
+  .c-container__message {
+    display: block;
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--colorTextLight);
+    padding-bottom: 2rem;
+  }
+
   .c-header__btn-theme {
     cursor: pointer;
   }
 
   .c-list__task {
+    cursor: pointer;
     animation: text-decoration 2s ease color 2s ease;
+  }
+  .c-list__task:hover .c-list__btn-delete {
+    opacity: 1;
   }
   .c-list__btn-delete {
     opacity: 0;
+    transition: opacity 0.5s ease;
     cursor: pointer;
+  }
+  .c-list__btn-delete path {
+    transition: fill 0.2s ease;
+  }
+  .c-list__btn-delete:hover path {
+    fill: var(--colorTextLightHover);
   }
 
   .c-menu__btn-clear {

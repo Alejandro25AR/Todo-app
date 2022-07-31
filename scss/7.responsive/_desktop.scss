@@ -1,11 +1,20 @@
-@media screen and (min-width: 1024px) {
+@use "../1.settings/variables";
+
+@media screen and (min-width: 960px) {
   .o-checkbox {
     & + label {
       cursor: pointer;
     }
-    &:hover + label::after{
-      background: linear-gradient(to right bottom,#57ddff, #c058f3);
+    &:hover + label::after {
+      background: linear-gradient(to right bottom, #57ddff, #c058f3);
     }
+  }
+  .c-container__message {
+    display: block;
+    text-align: center;
+    font-size: variables.$fs-text-m;
+    color: var(--colorTextLight);
+    padding-bottom: 2rem;
   }
   .c-header {
     &__btn-theme {
@@ -14,11 +23,28 @@
   }
   .c-list {
     &__task {
-      animation: text-decoration 2s ease color 2s ease; 
-    }
-    &__btn-delete {
-      opacity: 0;
       cursor: pointer;
+      animation: text-decoration 2s ease color 2s ease;
+    }
+
+    &__task:hover &__btn-delete {
+      opacity: 1;
+    }
+
+    &__btn-delete {
+      & {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        cursor: pointer;
+      }
+
+      & path {
+        transition: fill 0.2s ease;
+      }
+
+      &:hover path {
+        fill: var(--colorTextLightHover);
+      }
     }
   }
   .c-menu {
@@ -27,9 +53,9 @@
       &:hover {
         color: var(--colorTextLightHover);
       }
-    } 
+    }
     &__option {
-      & label{
+      & label {
         cursor: pointer;
       }
       &:hover {
